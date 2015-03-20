@@ -160,7 +160,23 @@ void help_command(int n,char *argv[]){
 	}
 }
 
+int fibonacci(int x) {
+    if(x<=0) return 0;
+    if(x==1) return 1;
+    return fibonacci(x-1) + fibonacci(x-2);
+}
+ 
 void test_command(int n, char *argv[]) {
+    int number=0;
+    int result=0;
+
+    fio_printf(1, "\n\r");
+    for(number=1;number<15;number++) {
+      fio_printf(1, "enter number:");
+      result = fibonacci(number);
+      fio_printf(1, "The fibonacci sequence at %d is: %d\n\r", number, result);
+    }
+
     int handle;
     int error;
 
