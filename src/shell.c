@@ -210,7 +210,7 @@ void doSomething() {
 }
 
 void new_command(int n, char *argv[]) {
-    xTaskCreate(doSomething, (signed portCHAR *) "new task", 256, NULL, 0, NULL);
+    xTaskCreate(doSomething, (signed portCHAR *) "NewTask", 256, NULL, 0, NULL);
     fio_printf(1, "\n\r");
 }
 
